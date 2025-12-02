@@ -71,3 +71,29 @@ WHERE education LIKE '%y';
 UPDATE marketing_campaign
 SET education = REGEXP_REPLACE(education, '([0-9])years', '\1 years', 'g')
 WHERE education ~ '[0-9]years';
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN last_contact TO days_since_contact;
+
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN previous TO number_of_contacts;
+
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN poutcome TO campaign_outcome;
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN "default" TO has_credit;
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN "emp.var.rate" TO emp_var_rate;
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN "cons.price.idx" TO cons_price_idx;
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN "cons.conf.idx" TO cons_conf_idx;
+
+ALTER TABLE marketing_campaign
+RENAME COLUMN "nr.employed" TO nr_employed;
