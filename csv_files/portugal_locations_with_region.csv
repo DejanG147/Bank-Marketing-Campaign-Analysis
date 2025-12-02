@@ -1,0 +1,51 @@
+location_id,location_name,location_category,region
+1,Ilha de São Miguel,island,Açores
+2,Leiria,city,Centro
+3,Setúbal,city,Lisboa
+4,Aveiro,city,Centro
+5,Tavira,town,Algarve
+6,Évora,city,Alentejo
+7,Sintra,town,Lisboa
+8,Comporta,village,Alentejo
+9,Coimbra,city,Centro
+10,Cascais,town,Lisboa
+11,Castelo Rodrigo,village,Centro
+12,Alcobaça,town,Centro
+13,Viseu,city,Centro
+14,Parque Nacional da Peneda-Gerês,natural_park,Norte
+15,Ericeira,town,Centro
+16,Lamego,city,Centro
+17,Costa Vicentina,natural_park,Alentejo
+18,Monsanto,village,Centro
+19,Piódão,village,Centro
+20,Porto,city,Norte
+21,Ilha do Pico,island,Açores
+22,Covilhã,city,Centro
+23,Chaves,town,Norte
+24,Marvão,village,Centro
+25,Ilha da Madeira,island,Madeira
+26,Tomar,town,Centro
+27,Óbidos,town,Centro
+28,Ria Formosa,natural_park,Algarve
+29,Silves,town,Algarve
+30,Ferragudo,village,Algarve
+31,Guimarães,city,Norte
+32,Ilha de Porto Santo,island,Madeira
+33,Sortelha,village,Centro
+34,Carvoeiro,village,Algarve
+35,Batalha,town,Centro
+36,Lagos,town,Algarve
+37,Monção,town,Norte
+38,Azenhas do Mar,village,Centro
+39,Cacela Velha,village,Algarve
+40,Peniche,town,Centro
+41,Braga,city,Norte
+42,Nazaré,town,Centro
+43,Ilha Terceira,island,Açores
+44,Santarém,city,
+45,Beja,city,Alentejo
+46,Parque Natural da Arrábida,natural_park,Lisboa
+47,Ponte de Lima,town,Norte
+48,Serra da Estrela,natural_park,Centro
+49,Faro,city,Algarve
+50,Lisbon,city,Lisboa
