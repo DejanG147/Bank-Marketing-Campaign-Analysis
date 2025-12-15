@@ -97,3 +97,37 @@ RENAME COLUMN "cons.conf.idx" TO cons_conf_idx;
 
 ALTER TABLE marketing_campaign
 RENAME COLUMN "nr.employed" TO nr_employed;
+
+
+/*Creating age bins */
+ALTER TABLE marketing_campaign ADD COLUMN age_group TEXT;
+UPDATE marketing_campaign SET age_group = 
+CASE WHEN age < 25 THEN '<25'
+WHEN age < 35 THEN '25-34'
+WHEN age < 50 THEN '35-49'
+ELSE '50+' END;
+
+/*Creating risk score*/
+ALTER TABLE marketing_campaign ADD COLUMN risk_score INT;
+UPDATE marketing_campaign SET risk_score = 
+(CASE WHEN has_credit = 'Yes' THEN 2 ELSE 0 END)
++(CASE WHEN loan = 'Yes' THEN 1 ELSE 0 END)
++(CASE WHEN housing = 'Yes' THEN 1 ELSE 0 END);
+
+/*Creating contact recency/previous success flag */
+ALTER TABLE marketing_campaign ADD COLUMN prev_success BOOLEAN;
+UPDATE marketing_campaign SET prev_success = 
+(campaign_outcome = 'Success')
+
+/*Creating euribor bins/groups */
+ALTER TABLE marketing_campaign ADD COLUMN euribor_group TEXT;
+UPDATE marketing_campaign SET euribor_group = 
+CASE WHEN euribor3m < 0.5 THEN '<0.5'
+WHEN euribor3m< 2.0 THEN '0.5-2' ELSE '>=2' END;
+
+
+SELECT *
+FROM marketing_campaign;
+
+SELECT *
+FROM bank_marketing;
