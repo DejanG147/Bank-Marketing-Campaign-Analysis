@@ -33,12 +33,27 @@ COUNT(*)
 FROM marketing_campaign
 GROUP BY campaign_outcome;
 
-/*Joining by location */ 
+/*Joining by location and creating table for CSV export*/ 
 
-WITH fullmc AS (SELECT * 
+CREATE TABLE final_marketing_analysis AS 
+SELECT
+
+ mc.call_id,
+    mc.age,
+    mc.job,
+    mc.marital,
+    mc.education,
+    mc.has_credit,
+    mc.housing,
+    mc.loan,
+    mc.month,
+    l.location_name,
+    l.region,
+    mc.y
+
 FROM marketing_campaign AS mc
 LEFT JOIN location AS l 
-ON mc.location_id = l.location_id)
+ON mc.location_id = l.location_id;
 
-SELECT * 
-FROM fullmc;
+SELECT *
+FROM final_marketing_analysis;
